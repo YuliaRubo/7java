@@ -1,9 +1,9 @@
 package com.company;
 
 final class  Person{
-    private String firsName;
-    private String lastName;
-    private Gender gender;
+    private  final String firsName;
+    private final String lastName;
+    private final Gender gender;
 
 Person(String firsName, String lastName, Gender gender){
     this.lastName=lastName;
@@ -15,8 +15,8 @@ Person(String firsName, String lastName, Gender gender){
         if (this == o) return true;
         if (!(o instanceof Person)) return false;
         Person person = (Person) o;
-        return firsName == person.firsName &&
-                lastName == person.lastName &&
+        return firsName.equals(person.firsName) &&
+                lastName.equals(person.lastName) &&
                 gender == person.gender;
     }
 

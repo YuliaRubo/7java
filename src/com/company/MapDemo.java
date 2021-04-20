@@ -13,15 +13,15 @@ public class MapDemo {
         Person c4 = new Person("Вася", "Сидоров", Gender.MALE);
         Person c5 = new Person("Марат", "Петров", Gender.MALE);
 
-        Map< Person, Integer> mapPerson = new HashMap<>();
-        mapPerson.put(c1, 1);
-        mapPerson.put(c2, 2);
-        mapPerson.put(c3, 3);
-        mapPerson.put(c4, 4);
-        mapPerson.put(c5, 5);
+        Map< Integer, Person> mapPerson = new HashMap<>();
+        mapPerson.put(1, c1);
+        mapPerson.put(2, c2);
+        mapPerson.put(3, c3);
+        mapPerson.put(4, c4);
+        mapPerson.put(5, c5);
 
         System.out.println(mapPerson.size());
-        for (Map.Entry<Person, Integer> keyValuePair : mapPerson.entrySet()) {
+        for (Map.Entry<Integer, Person> keyValuePair : mapPerson.entrySet()) {
             System.out.println(keyValuePair.getKey() + " - " + keyValuePair.getValue());
     }
 }}
